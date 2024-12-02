@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # librerias
+    'rest_framework',
+    
+    # apps
     'inmuebleslist_app',
 ]
 
