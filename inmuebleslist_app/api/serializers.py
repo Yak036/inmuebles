@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from inmuebleslist_app.models import Inmueble
 
 class InmuebleSerializer(serializers.Serializer):
     id = serializers.IntegerField()
@@ -8,3 +9,5 @@ class InmuebleSerializer(serializers.Serializer):
     imagen = serializers.CharField()
     active = serializers.BooleanField()
     
+    def create(self, validated_data):
+        return Inmueble.objects.create(**validated_data)
